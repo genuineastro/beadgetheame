@@ -142,11 +142,18 @@ let GALLERY_ITEMS = [
     img: "./assets/gallery/g2.jpg",
   },
   {
-    id: 6,
+    id: 7,
     aspect: "square",
     bg: "from-slate-950 via-emerald-900 to-green-950",
-    label: "Germany",
-    img: "./assets/gallery/g2.jpg",
+    label: "Canada",
+    img: "./assets/gallery/g3.jpg",
+  },
+  {
+    id: 8,
+    aspect: "square",
+    bg: "from-slate-950 via-emerald-900 to-green-950",
+    label: "Barcelona, Spain",
+    img: "./assets/gallery/g4.jpg",
   }
 ];
 
