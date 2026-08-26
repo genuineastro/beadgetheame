@@ -134,13 +134,13 @@ let GALLERY_ITEMS = [
     label: "Italy, Milan",
     img: "./assets/gallery/g1.jpg",
   },
-   {
-    id: 6,
-    aspect: "square",
-    bg: "from-slate-950 via-emerald-900 to-green-950",
-    label: "Germany",
-    img: "./assets/gallery/g2.jpg",
-  },
+  //  {
+  //   id: 6,
+  //   aspect: "square",
+  //   bg: "from-slate-950 via-emerald-900 to-green-950",
+  //   label: "Germany",
+  //   img: "./assets/gallery/g2.jpg",
+  // },
   {
     id: 7,
     aspect: "square",
@@ -166,7 +166,7 @@ let GALLERY_ITEMS2 = [
     img: "./assets/award4.jpg",
   },
   {
-    id: 3,
+    id: 2,
     aspect: "tall",
     bg: "from-emerald-950 via-green-900 to-black",
     label: "Happy Clients from Paris,France",
@@ -176,7 +176,7 @@ let GALLERY_ITEMS2 = [
     id: 3,
     aspect: "tall",
     bg: "from-emerald-950 via-green-900 to-black",
-    label: "Acharya ji, London",
+    label: "Client from spain",
     img: "./assets/award1.jpg",
   },
   {
