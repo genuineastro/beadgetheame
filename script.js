@@ -4,7 +4,7 @@
    ====================================================================== */
 const CONFIG = {
   whatsapp: {
-    number: "14743571392", // digits only, no +
+    number: "13068073839", // digits only, no +
     defaultMessage: "Hello Acharya Guru Ji, I need help with my relationship",
     urgentMessage: "Hello Acharya Guru Ji, I need urgent help"
   },
