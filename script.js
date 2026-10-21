@@ -1,193 +1,71 @@
 /* ======================================================================
-   CONFIG — edit everything here. No need to touch the HTML/CSS to
-   change WhatsApp number, review counts, quotes, videos, etc.
+   CONFIG — edit everything here.
    ====================================================================== */
 const CONFIG = {
   whatsapp: {
     number: "13068073839", // digits only, no +
-    defaultMessage: "Hello Acharya Guru Ji, I need help with my relationship",
-    urgentMessage: "Hello Acharya Guru Ji, I need urgent help"
+    defaultMessage: "Hello Acharya Ji, I'd like to book a coaching session"
   },
   instagramUrl: "https://www.instagram.com/solutionbreakup",
 
   marqueeItems: [
-    "10,000+ Happy Clients",
-    "4.9 / 5 Star Rating",
-    "100% Confidential",
-    "UK & Canada Specialist",
-    "24/7 Available",
-    "15+ Years Experience"
+    "Private One-to-One Coaching",
+    "Communication & Conflict",
+    "Rebuilding Trust",
+    "UK & Canada Clients",
+    "15+ Years Experience",
+    "Fees Confirmed Before Booking"
   ],
 
-  // Video testimonials — horizontal-scroll cards.
-  // youtubeId: leave "" to show a placeholder card instead of a real video.
+  // Only genuine clients who agreed to be shown. Keep labels neutral.
   videoReviews: [
-    { youtubeId: "rEKe_hckR-s", name: "Emily, UK", role: "Got her ex back in 21 days" },
-    { youtubeId: "md5ZiP_q3IY", name: "Jason, Canada", role: "Marriage was saved" },
-    { youtubeId: "y4YiHWbG-04", name: "Client Story", role: "Client Experience" },
-    { youtubeId: "laCedqqXQ_E", name: "Priya", role: "Guidance in a difficult time" }
+    { youtubeId: "rEKe_hckR-s", name: "Client, UK", role: "Client experience" },
+    { youtubeId: "md5ZiP_q3IY", name: "Client, Canada", role: "Client experience" },
+    { youtubeId: "y4YiHWbG-04", name: "Client Story", role: "Client experience" },
+    { youtubeId: "laCedqqXQ_E", name: "Client Story", role: "Client experience" }
   ],
 
-  // WhatsApp screenshot reviews
+  // WhatsApp screenshots. Check none mention readings, remedies or outcome promises.
   chatReviews: [
-    { img: "https://acharyagurujiuk.com/assets/Whatsapp%20reviews/Review1.png", alt: "WhatsApp review 1" },
-    { img: "https://acharyagurujiuk.com/assets/Whatsapp%20reviews/Review2.png", alt: "WhatsApp review 2" },
-    { img: "https://acharyagurujiuk.com/assets/Whatsapp%20reviews/Review3.png", alt: "WhatsApp review 3" },
-    { img: "https://acharyagurujiuk.com/assets/Whatsapp%20reviews/Review4.png", alt: "WhatsApp review 4" }
+    { img: "./assets/Whatsapp%20reviews/Review1.png", alt: "Client message 1" },
+    { img: "./assets/Whatsapp%20reviews/Review2.png", alt: "Client message 2" },
+    { img: "./assets/Whatsapp%20reviews/Review3.png", alt: "Client message 3" },
+    { img: "./assets/Whatsapp%20reviews/Review4.png", alt: "Client message 4" }
   ],
 
-  // Written quote reviews
-  quoteReviews: [
-    {
-      stars: 5,
-      quote: "I was completely broken after my partner of 4 years left suddenly. Within 3 weeks my partner came back and we are stronger than ever.",
-      name: "Emily Richardson",
-      location: "London, UK \u{1F1EC}\u{1F1E7}",
-      avatar: "https://acharyagurujiuk.com/assets/pp/images.jpg"
-    },
-    {
-      stars: 5,
-      quote: "I was sceptical at first, but after a few days my ex called out of nowhere. Worth every penny — he is the real deal.",
-      name: "Jason Mitchell",
-      location: "Toronto, Canada \u{1F1E8}\u{1F1E6}",
-      avatar: "https://acharyagurujiuk.com/assets/pp/boy-3.jpg"
-    },
-    {
-      stars: 5,
-      quote: "My marriage was on the edge of divorce — constant fighting, no love left. Guru Ji identified the issue and gave a clear solution.",
-      name: "Sarah Khan",
-      location: "Manchester, UK \u{1F1EC}\u{1F1E7}",
-      avatar: "https://acharyagurujiuk.com/assets/pp/girl-3.jpg"
-    },
-    {
-      stars: 5,
-      quote: "After finding out my partner was cheating I was shattered. Guru Ji gave me real strength and a clear path forward.",
-      name: "Raj Patel",
-      location: "Vancouver, Canada \u{1F1E8}\u{1F1E6}",
-      avatar: "https://acharyagurujiuk.com/assets/pp/boy-2.jpg"
-    },
-    {
-      stars: 5,
-      quote: "My parents were completely against our relationship. Through Guru Ji's guidance, they gave their blessing within a month.",
-      name: "Michael Tran",
-      location: "Calgary, Canada \u{1F1E8}\u{1F1E6}",
-      avatar: "https://acharyagurujiuk.com/assets/pp/boy-1.jpg"
-    }
-  ],
+  // Genuine reviews only, about the session experience (not results). Empty = hidden.
+  // Format: { stars: 5, quote: "...", name: "First name", location: "City, Country", avatar: "" }
+  quoteReviews: [],
 
-  // Sticky bottom mini CTA card (desktop + mobile popup)
   stickyCta: {
     enabled: true,
-    heading: "Need Relationship Guidance?",
+    heading: "Want to Talk It Through?",
     subtext: "Start a private conversation",
     buttonText: "Chat Now",
     showAfterScrollPx: 500,
-    reopenEverySession: true // if false, once closed it stays closed until page reload
-  },
-
-  // Sticky bottom bar (mobile quick-action strip)
-  stickyBar: {
-    enabled: true,
-    title: "Free private consultation",
-    subtitle: "Available 24/7 · 100% confidential",
-    buttonText: "Chat Now",
-    showAfterScrollPx: 400
+    reopenEverySession: true
   }
 };
 
-/* ====================================================================== */
-
-
-let GALLERY_ITEMS = [
-  {
-    id: 1,
-    aspect: "tall",
-    bg: "from-emerald-950 via-green-900 to-black",
-    label: "London Bridge, United Kingodm",
-    img: "https://www.lovespellcaster.uk/gallery/img-c-1.jpg",
-  },
-  {
-    id: 2,
-    aspect: "wide",
-    bg: "from-green-950 via-emerald-900 to-slate-950",
-    label: "London Eye,United Kingdom",
-    img: "https://www.lovespellcaster.uk/gallery/img-c-2.jpg",
-  },
-  {
-    id: 3,
-    aspect: "square",
-    bg: "from-teal-950 via-green-900 to-black",
-    label: "Paris,France",
-    img: "https://www.lovespellcaster.uk/gallery/img-c-3.jpg",
-  },
-  {
-    id: 4,
-    aspect: "square",
-    bg: "from-slate-950 via-emerald-900 to-green-950",
-    label: "Baku, Azerbaijan",
-    img: "https://www.lovespellcaster.uk/gallery/img-c-4.jpg",
-  },
-  {
-    id: 5,
-    aspect: "square",
-    bg: "from-slate-950 via-emerald-900 to-green-950",
-    label: "Italy, Milan",
-    img: "./assets/gallery/g1.jpg",
-  },
-  //  {
-  //   id: 6,
-  //   aspect: "square",
-  //   bg: "from-slate-950 via-emerald-900 to-green-950",
-  //   label: "Germany",
-  //   img: "./assets/gallery/g2.jpg",
-  // },
-  {
-    id: 7,
-    aspect: "square",
-    bg: "from-slate-950 via-emerald-900 to-green-950",
-    label: "Canada",
-    img: "./assets/gallery/g3.jpg",
-  },
-  {
-    id: 8,
-    aspect: "square",
-    bg: "from-slate-950 via-emerald-900 to-green-950",
-    label: "Barcelona, Spain",
-    img: "./assets/gallery/g4.jpg",
-  }
+/* Gallery images — hosted on your own site in ./assets/gallery/ */
+const GALLERY_TRAVEL = [
+  { label: "London Bridge, United Kingdom", img: "./assets/gallery/img-c-1.jpg" },
+  { label: "London Eye, United Kingdom", img: "./assets/gallery/img-c-2.jpg" },
+  { label: "Paris, France", img: "./assets/gallery/img-c-3.jpg" },
+  { label: "Baku, Azerbaijan", img: "./assets/gallery/img-c-4.jpg" },
+  { label: "Milan, Italy", img: "./assets/gallery/g1.jpg" },
+  { label: "Canada", img: "./assets/gallery/g3.jpg" },
+  { label: "Barcelona, Spain", img: "./assets/gallery/g4.jpg" }
 ];
 
-let GALLERY_ITEMS2 = [
-  {
-    id: 1,
-    aspect: "tall",
-    bg: "from-emerald-950 via-green-900 to-black",
-    label: "Multiple Record Holder in Astrology",
-    img: "./assets/award4.jpg",
-  },
-  {
-    id: 2,
-    aspect: "tall",
-    bg: "from-emerald-950 via-green-900 to-black",
-    label: "Happy Clients from Paris,France",
-    img: "./assets/award2.jpg",
-  },
-  {
-    id: 3,
-    aspect: "tall",
-    bg: "from-emerald-950 via-green-900 to-black",
-    label: "Client from spain",
-    img: "./assets/award1.jpg",
-  },
-  {
-    id: 4,
-    aspect: "tall",
-    bg: "from-emerald-950 via-green-900 to-black",
-    label: "Divorce Issue Solved in London",
-    img: "./assets/award3.jpg",
-  }
-]
+const GALLERY_RECOGNITION = [
+  { label: "Event", img: "./assets/award4.jpg" },
+  { label: "With Clients in Paris, France", img: "./assets/award2.jpg" },
+  { label: "With a Client from Spain", img: "./assets/award1.jpg" },
+  { label: "London", img: "./assets/award3.jpg" }
+];
 
+/* ====================================================================== */
 
 function waLink(message) {
   const text = encodeURIComponent(message || CONFIG.whatsapp.defaultMessage);
@@ -207,21 +85,16 @@ function initHeaderScroll() {
   });
 }
 
-/* ---------- wire static WhatsApp / Instagram links from CONFIG ---------- */
+/* ---------- wire WhatsApp / Instagram links ---------- */
 function wireStaticLinks() {
   document.querySelectorAll("[data-wa]").forEach((el) => {
-    const kind = el.getAttribute("data-wa"); // "default" | "urgent" | "bare"
-    const msg =
-      kind === "urgent" ? CONFIG.whatsapp.urgentMessage :
-        kind === "bare" ? "" :
-          CONFIG.whatsapp.defaultMessage;
-    el.href = kind === "bare" ? `https://wa.me/${CONFIG.whatsapp.number}` : waLink(msg);
+    const kind = el.getAttribute("data-wa");
+    el.href = kind === "bare"
+      ? `https://wa.me/${CONFIG.whatsapp.number}`
+      : waLink(CONFIG.whatsapp.defaultMessage);
   });
   document.querySelectorAll("[data-ig]").forEach((el) => {
     el.href = CONFIG.instagramUrl;
-  });
-  document.querySelectorAll("[data-wa-tel]").forEach((el) => {
-    el.textContent = `+${CONFIG.whatsapp.number.replace(/^44/, "44 ")}`;
   });
 }
 
@@ -250,38 +123,25 @@ function initReviewTabs() {
   });
 }
 
-/* ---------- build video review cards (horizontal scroll) ---------- */
+/* ---------- video reviews ---------- */
 function buildVideoReviews() {
   const scroller = document.getElementById("videoScroller");
   if (!scroller) return;
 
-  scroller.innerHTML = CONFIG.videoReviews.map((v, i) => {
-    const inner = v.youtubeId
-      ? `<div class="v-thumb"><div class="play"><i class="fa-solid fa-play"></i></div></div>`
+  scroller.innerHTML = CONFIG.videoReviews.map((v) => {
+    const media = v.youtubeId
+      ? `<iframe src="https://www.youtube.com/embed/${v.youtubeId}" title="Client video" allow="encrypted-media" allowfullscreen loading="lazy"></iframe>`
       : `<div class="v-thumb"><div class="play"><i class="fa-solid fa-play"></i></div><div class="placeholder-text">Video coming soon</div></div>`;
     return `
       <div class="v-item">
-        <div class="v-card" data-yt="${v.youtubeId}" data-index="${i}">
-        //   ${inner}
-        <iframe src="https://www.youtube.com/embed/${v.youtubeId}?autoplay=0" title="Client video testimonial" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+        <div class="v-card">${media}</div>
         <div class="v-name">${v.name}</div>
         <div class="v-role">${v.role}</div>
         <div class="v-underline"></div>
-      </div>
-    `;
+      </div>`;
   }).join("");
-
-  scroller.querySelectorAll(".v-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      const yt = card.dataset.yt;
-      if (!yt) return; // placeholder card, nothing to play yet
-      card.innerHTML = `<iframe src="https://www.youtube.com/embed/${yt}?autoplay=1" title="Client video testimonial" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-    });
-  });
 }
 
-/* ---------- video scroller nav buttons ---------- */
 function initVideoScrollerNav() {
   const scroller = document.getElementById("videoScroller");
   const left = document.getElementById("videoLeft");
@@ -291,7 +151,7 @@ function initVideoScrollerNav() {
   right.addEventListener("click", () => scroller.scrollBy({ left: 250, behavior: "smooth" }));
 }
 
-/* ---------- build chat screenshot reviews ---------- */
+/* ---------- chat screenshots ---------- */
 function buildChatReviews() {
   const scroller = document.getElementById("chatScroller");
   if (!scroller) return;
@@ -300,23 +160,30 @@ function buildChatReviews() {
   `).join("");
 }
 
-/* ---------- build written quote reviews ---------- */
+/* ---------- written reviews (hidden when empty) ---------- */
 function buildQuoteReviews() {
   const scroller = document.getElementById("quoteScroller");
+  const nav = document.getElementById("quoteNav");
   if (!scroller) return;
+
+  if (!CONFIG.quoteReviews.length) {
+    scroller.style.display = "none";
+    if (nav) nav.style.display = "none";
+    return;
+  }
+
   scroller.innerHTML = CONFIG.quoteReviews.map((q) => `
     <div class="quote-card">
       <div class="stars">${starString(q.stars)}</div>
       <p class="q">"${q.quote}"</p>
       <div class="who">
-        <img src="${q.avatar}" alt="${q.name}" loading="lazy">
+        ${q.avatar ? `<img src="${q.avatar}" alt="${q.name}" loading="lazy">` : ""}
         <div><b>${q.name}</b><span>${q.location}</span></div>
       </div>
     </div>
   `).join("");
 }
 
-/* ---------- quote scroller nav buttons ---------- */
 function initQuoteScrollerNav() {
   const qScroller = document.getElementById("quoteScroller");
   const leftBtn = document.getElementById("quoteLeft");
@@ -326,7 +193,7 @@ function initQuoteScrollerNav() {
   rightBtn.addEventListener("click", () => qScroller.scrollBy({ left: 340, behavior: "smooth" }));
 }
 
-/* ---------- faq accordion ---------- */
+/* ---------- FAQ accordion ---------- */
 function initFaqAccordion() {
   document.querySelectorAll(".faq-item").forEach((item) => {
     const a = item.querySelector(".faq-a");
@@ -345,7 +212,7 @@ function initFaqAccordion() {
   });
 }
 
-/* ---------- sticky bottom mini CTA card ---------- */
+/* ---------- sticky mini CTA ---------- */
 function initStickyCta() {
   const cfg = CONFIG.stickyCta;
   const card = document.getElementById("stickyCta");
@@ -353,246 +220,125 @@ function initStickyCta() {
 
   card.querySelector(".sticky-cta-heading").textContent = cfg.heading;
   card.querySelector(".sticky-cta-subtext").textContent = cfg.subtext;
-  card.querySelector(".sticky-cta-btn").innerHTML = `<i class="fa-brands fa-whatsapp"></i> ${cfg.buttonText}`;
-  card.querySelector(".sticky-cta-btn").href = waLink(CONFIG.whatsapp.defaultMessage);
+  const btn = card.querySelector(".sticky-cta-btn");
+  btn.innerHTML = `<i class="fa-brands fa-whatsapp"></i> ${cfg.buttonText}`;
+  btn.href = waLink(CONFIG.whatsapp.defaultMessage);
 
   const closedKey = "stickyCtaClosed";
   let dismissed = sessionStorage.getItem(closedKey) === "1";
 
-  const closeBtn = card.querySelector(".sticky-cta-close");
-  closeBtn.addEventListener("click", () => {
+  card.querySelector(".sticky-cta-close").addEventListener("click", () => {
     card.classList.remove("visible");
     dismissed = true;
     if (!cfg.reopenEverySession) sessionStorage.setItem(closedKey, "1");
   });
 
   window.addEventListener("scroll", () => {
-    if (dismissed) return;
-    if (window.scrollY > cfg.showAfterScrollPx) {
-      card.classList.add("visible");
-    }
-  });
-}
-
-/* ---------- sticky bottom bar (mobile) ---------- */
-function initStickyBar() {
-  const cfg = CONFIG.stickyBar;
-  const bar = document.getElementById("stickyBar");
-  if (!cfg.enabled || !bar) return;
-
-  bar.querySelector(".sticky-bar-title").textContent = cfg.title;
-  bar.querySelector(".sticky-bar-subtitle").textContent = cfg.subtitle;
-  bar.querySelector(".sticky-bar-btn").innerHTML = `<i class="fa-brands fa-whatsapp"></i> ${cfg.buttonText}`;
-  bar.querySelector(".sticky-bar-btn").href = waLink(CONFIG.whatsapp.defaultMessage);
-
-  window.addEventListener("scroll", () => {
-    bar.classList.toggle("visible", window.scrollY > cfg.showAfterScrollPx);
+    if (!dismissed && window.scrollY > cfg.showAfterScrollPx) card.classList.add("visible");
   });
 }
 
 /* =========================================================
    GALLERY SLIDER
+   (set up once; switching tabs swaps the images instead of
+   adding duplicate click handlers and timers)
 ========================================================= */
-function initGallery(galleryItems) {
-  const track = document.getElementById("galleryTrack");
-  const dotsContainer = document.getElementById("galleryDots");
-  const prevButton = document.getElementById("galleryPrev");
-  const nextButton = document.getElementById("galleryNext");
-  const viewport = document.querySelector(".gallery-viewport");
-
-  if (!track || !viewport || !dotsContainer) return;
-
+const Gallery = (() => {
+  let items = [];
   let currentIndex = 0;
   let autoplay = null;
   let touchStartX = 0;
+  let track, dotsContainer, viewport;
 
-  /* ---------- RENDER ---------- */
+  function cards() { return [...track.querySelectorAll(".gallery-card")]; }
+  function dots() { return [...dotsContainer.querySelectorAll(".gallery-dot")]; }
 
-  function renderGallery() {
-    renderCards();
-    renderDots();
-  }
-
-  function renderCards() {
+  function render() {
     track.innerHTML = "";
-
-    galleryItems.forEach((item) => {
-      const card = document.createElement("div");
-      card.className = "gallery-card";
-
-      card.innerHTML = `
-                <img src="${item.img}" alt="${item.label}" loading="lazy">
-                <div class="gallery-caption">${item.label}</div>
-            `;
-
-      track.appendChild(card);
-    });
-  }
-
-  function renderDots() {
     dotsContainer.innerHTML = "";
 
-    galleryItems.forEach((item, index) => {
-      const dot = document.createElement("button");
+    items.forEach((item, index) => {
+      const card = document.createElement("div");
+      card.className = "gallery-card";
+      card.innerHTML = `
+        <img src="${item.img}" alt="${item.label}" loading="lazy">
+        <div class="gallery-caption">${item.label}</div>`;
+      track.appendChild(card);
 
+      const dot = document.createElement("button");
       dot.type = "button";
       dot.className = "gallery-dot";
       dot.setAttribute("aria-label", `Show gallery image ${index + 1}`);
-
-      dot.addEventListener("click", () => {
-        goToSlide(index);
-        restartAutoplay();
-      });
-
+      dot.addEventListener("click", () => { goTo(index); startAutoplay(); });
       dotsContainer.appendChild(dot);
     });
   }
 
-  /* ---------- ELEMENTS ---------- */
-
-  function getCards() {
-    return [...track.querySelectorAll(".gallery-card")];
-  }
-
-  function getDots() {
-    return [...dotsContainer.querySelectorAll(".gallery-dot")];
-  }
-
-  /* ---------- SLIDE ---------- */
-
-  function getSlideOffset(index) {
-    const card = getCards()[index];
-
+  function offsetFor(index) {
+    const card = cards()[index];
     if (!card) return 0;
-
-    const cardCenter =
-      card.offsetLeft + card.offsetWidth / 2;
-
-    return viewport.clientWidth / 2 - cardCenter;
+    return viewport.clientWidth / 2 - (card.offsetLeft + card.offsetWidth / 2);
   }
 
-  function goToSlide(index) {
-    const cards = getCards();
-    const dots = getDots();
-
-    if (!cards.length) return;
-
-    currentIndex =
-      (index + cards.length) % cards.length;
-
-    track.style.transform =
-      `translate3d(${getSlideOffset(currentIndex)}px, 0, 0)`;
-
-    cards.forEach((card, i) => {
-      card.classList.toggle(
-        "active",
-        i === currentIndex
-      );
-    });
-
-    dots.forEach((dot, i) => {
-      dot.classList.toggle(
-        "active",
-        i === currentIndex
-      );
-    });
-  }
-
-  /* ---------- NAVIGATION ---------- */
-
-  function nextSlide() {
-    goToSlide(currentIndex + 1);
-    restartAutoplay();
-  }
-
-  function previousSlide() {
-    goToSlide(currentIndex - 1);
-    restartAutoplay();
-  }
-
-  nextButton?.addEventListener("click", nextSlide);
-  prevButton?.addEventListener("click", previousSlide);
-
-  /* ---------- AUTOPLAY ---------- */
-
-  function startAutoplay() {
-    stopAutoplay();
-
-    if (galleryItems.length <= 1) return;
-
-    autoplay = setInterval(() => {
-      goToSlide(currentIndex + 1);
-    }, 3500);
+  function goTo(index) {
+    const all = cards();
+    if (!all.length) return;
+    currentIndex = (index + all.length) % all.length;
+    track.style.transform = `translate3d(${offsetFor(currentIndex)}px, 0, 0)`;
+    all.forEach((c, i) => c.classList.toggle("active", i === currentIndex));
+    dots().forEach((d, i) => d.classList.toggle("active", i === currentIndex));
   }
 
   function stopAutoplay() {
-    if (autoplay) {
-      clearInterval(autoplay);
-      autoplay = null;
-    }
+    if (autoplay) { clearInterval(autoplay); autoplay = null; }
   }
 
-  function restartAutoplay() {
+  function startAutoplay() {
     stopAutoplay();
+    if (items.length > 1) autoplay = setInterval(() => goTo(currentIndex + 1), 3500);
+  }
+
+  function init() {
+    track = document.getElementById("galleryTrack");
+    dotsContainer = document.getElementById("galleryDots");
+    viewport = document.querySelector(".gallery-viewport");
+    if (!track || !dotsContainer || !viewport) return false;
+
+    document.getElementById("galleryNext")?.addEventListener("click", () => { goTo(currentIndex + 1); startAutoplay(); });
+    document.getElementById("galleryPrev")?.addEventListener("click", () => { goTo(currentIndex - 1); startAutoplay(); });
+
+    viewport.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoplay();
+    }, { passive: true });
+
+    viewport.addEventListener("touchend", (e) => {
+      const distance = touchStartX - e.changedTouches[0].screenX;
+      if (Math.abs(distance) > 45) goTo(currentIndex + (distance > 0 ? 1 : -1));
+      startAutoplay();
+    }, { passive: true });
+
+    window.addEventListener("resize", () => goTo(currentIndex));
+    return true;
+  }
+
+  function setItems(newItems) {
+    if (!track) return;
+    items = newItems;
+    currentIndex = 0;
+    render();
+    goTo(0);
     startAutoplay();
   }
 
-  /* ---------- SWIPE ---------- */
+  return { init, setItems };
+})();
 
-  function handleTouchStart(event) {
-    touchStartX =
-      event.changedTouches[0].screenX;
-
-    stopAutoplay();
-  }
-
-  function handleTouchEnd(event) {
-    const touchEndX =
-      event.changedTouches[0].screenX;
-
-    const distance =
-      touchStartX - touchEndX;
-
-    if (Math.abs(distance) > 45) {
-      distance > 0
-        ? nextSlide()
-        : previousSlide();
-    } else {
-      restartAutoplay();
-    }
-  }
-
-  viewport.addEventListener(
-    "touchstart",
-    handleTouchStart,
-    { passive: true }
-  );
-
-  viewport.addEventListener(
-    "touchend",
-    handleTouchEnd,
-    { passive: true }
-  );
-
-  /* ---------- RESIZE ---------- */
-
-  window.addEventListener("resize", () => {
-    goToSlide(currentIndex);
-  });
-
-  /* ---------- INITIALIZE ---------- */
-
-  renderGallery();
-  goToSlide(0);
-  startAutoplay();
-}
-
-/* ---------- mentor image selector ---------- */
-function initMentorSelector() {
+/* ---------- gallery tab selector ---------- */
+function initGallerySelector() {
   document.querySelectorAll(".selector-card").forEach((card, i) => {
     card.addEventListener("click", () => {
-      if (i == 0) { initGallery(GALLERY_ITEMS2), console.log(i, "ilo") }
-      else { initGallery(GALLERY_ITEMS) }
+      Gallery.setItems(i === 0 ? GALLERY_RECOGNITION : GALLERY_TRAVEL);
       document.querySelectorAll(".selector-card").forEach((c) => c.classList.remove("active"));
       card.classList.add("active");
     });
@@ -604,7 +350,6 @@ document.addEventListener("DOMContentLoaded", () => {
   wireStaticLinks();
   initHeaderScroll();
   buildMarquee();
-  initMentorSelector();
   initReviewTabs();
   buildVideoReviews();
   initVideoScrollerNav();
@@ -613,11 +358,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initQuoteScrollerNav();
   initFaqAccordion();
   initStickyCta();
-  initStickyBar();
 
-  initGallery(GALLERY_ITEMS2);
-
+  if (Gallery.init()) {
+    Gallery.setItems(GALLERY_RECOGNITION);
+    initGallerySelector();
+  }
 });
-
-
-
