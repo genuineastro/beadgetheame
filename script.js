@@ -6,7 +6,7 @@ const CONFIG = {
     number: "13068073839", // digits only, no +
     defaultMessage: "Hello Acharya Ji, I need help!"
   },
-  instagramUrl: "https://www.instagram.com/solutionbreakup",
+  instagramUrl: "https://www.instagram.com/acharya.ji.official",
 
   marqueeItems: [
     "Private One-to-One Coaching",
