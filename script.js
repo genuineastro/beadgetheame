@@ -4,7 +4,7 @@
 const CONFIG = {
   whatsapp: {
     number: "13068073839", // digits only, no +
-    defaultMessage: "Hello Acharya Ji, I'd like to book a coaching session"
+    defaultMessage: "Hello Acharya Ji, I need help!"
   },
   instagramUrl: "https://www.instagram.com/solutionbreakup",
 
